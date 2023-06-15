@@ -27,17 +27,19 @@ func main() {
 		return
 	}
 
+	fmt.Println("Entered string: " + encryptText)
+
 	encryptedText, err := encrypt(encryptText, keyText)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(encryptedText)
+	fmt.Println("Encrypted string: " + encryptedText)
 
 	decryptedText, err := decrypt(encryptedText, keyText)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(decryptedText)
+	fmt.Println("Decrypted string: " + decryptedText)
 }
 
 func encrypt(stringToEncrypt string, keyString string) (string, error) {
